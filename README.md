@@ -6,18 +6,18 @@ A lightweight Flask web application to detect phishing websites using machine le
 
 
  ✅ Features
-Real-time phishing prediction using trained model
-Web interface built with Flask
-Stores scan history in SQLite3
-Highlights result as Phishing or Legitimate
+1. Real-time phishing prediction using trained model
+2. Web interface built with Flask
+3. Stores scan history in SQLite3
+4. Highlights result as Phishing or Legitimate
 
 
 🧰 Technologies Used
- Python 3.x
- Flask (Web Framework)
- Scikitlearn (Machine Learning)
- SQLite3 (Database)
- HTML/CSS/JS (Frontend)
+1. Python 3.x
+2. Flask (Web Framework)
+3. Scikitlearn (Machine Learning)
+4. SQLite3 (Database)
+5. HTML/CSS/JS (Frontend)
 
 
  📁 Project Structure
@@ -34,9 +34,10 @@ Highlights result as Phishing or Legitimate
 
 
  🔮 Future Enhancements
- WHOIS and domain age analysis
- Browser extension integration
- Admin panel and statistics
+1. WHOIS and domain age analysis
+2. Browser extension integration
+3. Admin panel and statistics
+
 📃 License
 This project is opensource and intended for educational use only.
 
