@@ -1,0 +1,30 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Phishing Detection</title>
+  <style>
+    body { font-family: Arial; background: #f4f6f8; padding: 40px; text-align: center; }
+    input[type="text"] { width: 60%; padding: 10px; font-size: 1rem; }
+    button { padding: 10px 20px; font-size: 1rem; background: #007BFF; color: white; border: none; }
+    .result { margin-top: 20px; font-size: 1.2rem; font-weight: bold; }
+    .phishing { color: red; }
+    .legitimate { color: green; }
+    a { text-decoration: none; margin-top: 20px; display: inline-block; }
+  </style>
+</head>
+<body>
+  <h1>Phishing URL Detection</h1>
+  <form method="POST">
+    <input type="text" name="url" placeholder="Enter a URL..." value="{{ url }}">
+    <button type="submit">Check</button>
+  </form>
+
+  {% if prediction %}
+    <div class="result {{ prediction|lower }}">{{ url }} is <strong>{{ prediction }}</strong></div>
+  {% endif %}
+
+  <a href="/logs">View Logs</a>
+</body>
+</html>

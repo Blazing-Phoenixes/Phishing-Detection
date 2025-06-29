@@ -1,0 +1,41 @@
+<!-- templates/logs.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Detection Logs</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f4f6f8; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 10px; border-bottom: 1px solid #ccc; text-align: center; }
+    th { background: #007BFF; color: white; }
+    .phishing { color: red; font-weight: bold; }
+    .legitimate { color: green; font-weight: bold; }
+    a { display: block; margin-bottom: 20px; text-decoration: none; color: #007BFF; }
+  </style>
+</head>
+<body>
+  <a href="/">← Back to Home</a>
+  <h2>Detection Logs</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>URL</th>
+        <th>Prediction</th>
+        <th>Timestamp</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in data %}
+        <tr>
+          <td>{{ row['id'] }}</td>
+          <td>{{ row['url'] }}</td>
+          <td class="{{ row['prediction']|lower }}">{{ row['prediction'] }}</td>
+          <td>{{ row['timestamp'] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
